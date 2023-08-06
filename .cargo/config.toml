@@ -1,0 +1,7 @@
+[build]
+rustflags = ["-C", "link-arg=-fuse-ld=mold"]
+
+[profile.release]
+codegen-units = 1
+lto = true
+panic = "abort"
