@@ -121,6 +121,7 @@ async fn main() -> std::io::Result<()> {
             )
             .service(index)
     })
+    //TODO: try replacing the public ip with 0,0,0,0 for deployment's sake if I ever feel the need to migrate the server
     .bind(("95.217.119.115", 80))?
     .bind_rustls("95.217.119.115:443", config)?
     .run()
